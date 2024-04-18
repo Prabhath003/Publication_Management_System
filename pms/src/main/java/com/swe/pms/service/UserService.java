@@ -1,14 +1,10 @@
 package com.swe.pms.service;
 
 import com.swe.pms.domain.User;
+import com.swe.pms.exception.UserAlreadyExistsException;
 
-// public class UserService {
-//     User createUser(User user) throws UserAlreadyExsitsException;
-//     // Other service methods...
-// }
-
-public class  UserService {
-    User createUser(User user) throws UserAlreadyExsitsException;
-
-    // Other service methods;
+public interface UserService {
+    User createUser(User user) throws UserAlreadyExistsException;
+    User getUserByUsername(String username);
+    // Add other methods for user management functionalities (e.g., update, delete)
 }
